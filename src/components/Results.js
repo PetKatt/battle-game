@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 import api from "../utils/api";
 import PlayerPreview from "./PlayerPreview";
+import Loading from "./Loading";
 
 function Profile (props) {
 	var info = props.info;
@@ -93,7 +94,7 @@ class Results extends React.Component {
 		var loading = this.state.loading;
 
 		if (loading === true) {
-			return <p>LOADING!</p>;
+			return <Loading />;
 		}
 
 		if (error) {
